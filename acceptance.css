@@ -1,0 +1,266 @@
+/* ---------------------
+Gobal styles
+----------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  line-height: 1.4;
+  color: #222;
+  background: #fff;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+
+}
+
+/* ---------------------
+layout
+----------------------*/
+
+header {
+  padding: 2em;
+  background: rgb(244, 244, 244);
+}
+
+main {
+  padding: 1em 2em;
+}
+
+.content {
+  max-width: 45em;  
+}
+
+/* ---------------------
+Paragraphs
+----------------------*/
+
+p {
+  margin: 1em 0 1.5em;
+  line-height: 1.5;
+}
+
+/* ---------------------
+Headings
+----------------------*/
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  color: #333;
+  font-weight: 600;
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.4em;
+}
+
+h2 {
+  margin: 2em 0 .5em;
+  font-size: 1.8em;
+}
+
+h3 {
+  margin: 3em 0 1em;
+  font-size: 1.4em;
+}
+
+h4 {
+  margin: 0 0 .5em;
+  font-size: 1em;
+  font-family: 'Helvetica Neue', Helvetica, Arial, Frutiger, 'Frutiger Linotype', Univers, Calibri, 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', Myriad, 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, sans-serif;
+}
+
+ul {
+  margin: 1em 0;
+}
+
+/* ---------------------
+Details
+----------------------*/
+
+details {
+  border: 1px solid #aaa;
+  border-radius: .3em;
+  margin: 1em 0;
+  padding: 0;
+}
+
+details:hover {
+  border: 1px solid #000;
+  box-shadow: 0 0 5px #999;
+}
+
+summary {
+  padding: 1em;
+  border-radius: .3em .3em 0 0;
+}
+
+summary:focus {
+  outline: 0;
+  color: #fff;
+  background: #000;
+}
+
+.details-content {
+  margin: 0;
+  padding: 1em;
+}
+
+.details-content h3 {
+  margin: 0;
+}
+
+.details-content p:last-child,
+.details-content ul:last-child {
+  margin-bottom: 0;
+}
+
+kbd {
+  border: .03em solid #ccc;
+  border-radius: .2em;
+  padding: .2em .2em .1em;
+  color: #555;
+  background-image: linear-gradient(#fff, #eee);
+  box-shadow: .05em .05em .1em #aaa;
+  font-family: consolas, courier, monospace;
+}
+
+.copy {
+  padding: .5em 0 1em 1em;
+}
+
+.logo {
+  padding: 1.5em 0;
+}
+
+.logo a {
+  display: inline-block;
+}
+
+.logo img {
+  display: block;
+  width: 150px;
+}
+
+
+/* ---------------------
+Links
+----------------------*/
+
+a:link {
+  color: #0A7399;
+  background: transparent;
+}
+
+a:visited {
+  color: #086D91;
+  background: transparent;
+}
+
+a:hover {
+  color: #007700;
+  background: transparent;
+}
+
+a:focus {
+  color: #000;
+  outline: 0;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #000;
+}
+
+a:active {
+  color: #AA0000;
+  background: transparent;
+}
+
+/* ---------------------
+Horizontal rules
+----------------------*/
+
+hr {
+  margin: 1em 0 3em;
+}
+
+/* ---------------------
+Pre and code
+----------------------*/
+
+
+code {
+  font-size: 1em;
+  color: green;
+  font-family: monaco, courier, monospace;
+}
+
+
+/* ---------------------
+Forms
+----------------------*/
+
+.button,
+button {
+  display: inline-block;
+  padding: 0.75em 1em;
+  border: 0;
+  background: rgb(187, 50, 0);
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 1em;
+  font-size: 1em;
+  line-height: 1;
+  font-family: helvetica, arial, sans-serif;
+}
+
+.button:focus,
+button:focus {
+  background: #000;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #000;
+}
+
+.button:hover,
+button:hover {
+  background: rgb(150, 0, 0);
+  color: #fff;
+}
+
+.button:active,
+button:active {
+  background: rgb(187, 70, 20);
+  color: #fff;
+}
+
+.button-small {
+  font-size: 90%;
+}
+
+.button-smaller {
+  font-size: 80%;
+}
+
+/* ---------------------
+Hidden
+----------------------*/
+
+.sr-only,
+.hidden {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}

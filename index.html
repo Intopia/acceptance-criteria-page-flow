@@ -1,0 +1,771 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Acceptance criteria - page and user-flow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="acceptance.css" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <div class="content">
+    <div class="logo"><a href="https://intopia.digital/" target="_blank" aria-label="Intopia website"><img src="intopia.png" alt="Intopia logo"></a></div>
+      
+    <h1>Accessibility acceptance criteria:<br>page and user-flow level</h1>
+  </div>
+</header>
+
+<main>
+  <div class="content">
+    <p>Page and user-flow level acceptance criteria are testable checks that apply to full pages or complete user-flows. They can be used to ensure accessibility is considered and tested across entire journeys, not just individual components.</p>
+
+    <p>Where can then be used?</p>
+
+    <ul>
+      <li>During design reviews of entire pages or flows.</li>
+      <li>In user stories, epics, and sprint tickets.</li>
+      <li>As part of the “Definition of Done”.</li>
+      <li>As part of QA and UAT testing for full journeys.</li>
+    </ul>
+
+    <p>Who owns page and user-flow accecptance criteria?</p>
+
+    <ul>
+      <li><b>POs and BAs</b>: define expected outcomes for pages and user journeys.</li>
+      <li><b>Designers</b>: ensure accessible design across pages and user journeys.</li>
+      <li><b>Developers</b>: implement accessibility across pages and user journeys.</li>
+      <li><b>Testers/QAs</b>: verify pages and user journeys meet expectations.</li>
+    </ul>
+
+    <h2>Page and user-flow level acceptance criteria</h2>
+
+    <p><a href="acceptance-criteria-page-and-user-flow.xlsx">Download all acceptance criteria and test questions as an Excel file</a></p>
+
+    <p style="margin-top: 1.5em"><button class="button-small" id="openAll">Open all acceptance criteria</button></p>
+
+    <h3>1. People with varied learning or cognition</h3>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>1.1</b>: The purpose of each page or step is clearly communicated.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is the purpose of each page or step clearly communicated?</p>
+        <h4>Simple steps to test:</h4>
+        <ul>
+          <li>Use the form or complete the action.</li>
+          <li>Check for visible success message./li>
+          <li>Use a screen reader to confirm it’s announced.</li>
+        </ul>
+        <h4>What determines pass:</h4>
+        <p>The success message is visible on screen and announced by screen readers without extra user interaction.</p>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 1.1 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>1.2</b>: Structure and navigation are simple and consistent.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is the structure and navigation simple and consistent?</p>
+        <h4>Simple steps to test:</h4>
+        <p>Use keyboard or a screen reader to navigate using headings or menu items.</p>
+        <h4>What determines pass:</h4>
+        <p>Structure follows a logical pattern and navigation feels intuitive without needing to backtrack.</p>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 1.2 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>1.3</b>: Instructions, labels, and feedback are easy to understand.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are instructions, labels, and feedback easy to understand?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li> Look at every form field and button.</li>
+          <li>  Ask: is it obvious what to do and when?</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Clear instructions are placed before interaction.</li>
+          <li>Labels are short, consistent, and jargon-free.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 1.3 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>1.4</b>: Users can recover easily from mistakes.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Can users recover easily from mistakes?</p>
+        <h4>Simple steps to test:</h4>
+        <p>Try submitting a form with missing or incorrect info (e.g., leave required fields blank).</p>
+        <h4>What determines pass:</h4>
+        <p>Errors are clearly described, focus moves to the problem area, and the user can try again.</p>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 1.4 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>1.5</b>: Success messages are clearly announced after key actions.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are success messages clearly announced after key actions?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Perform a key action (e.g. submit a form, save settings).</li>
+          <li>Check if a visible success message appears.</li>
+          <li>Use a screen reader (e.g. NVDA or VoiceOver) to repeat the test.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>A visible message appears immediately after the action.</li>
+          <li>The screen reader announces the message without needing to move focus manually.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 1.5 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>1.6</b>: Users are warned about and given control over any time limits.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are users warned about and given control over any time limits?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Stay on a form or session-based page for several minutes without interacting.</li>
+          <li>Check for warning messages before timeout or session expiry.</li>
+          <li>Try to extend the session or adjust the time limit if possible.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>A warning is shown before timeout.</li>
+          <li>The user has a clear way to extend time (e.g. “Stay signed in” button).</li>
+          <li>Alternatively, time limits are clearly explained and adjustable in settings.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 1.6 to clipboard</button></div>
+    </details>
+
+
+    <h3>2. People with reduced colour vision</h3>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>2.1</b>: All content and interactive elements have sufficient colour contrast.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Does all content and interactive elements have sufficient colour contrast?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use a colour contrast analyser tool (e.g. <a href="https://webaim.org/resources/contrastchecker/" target="_blank">WebAIM Contrast Checker</a>).</li>
+          <li>Sample the foreground (text) and background colours.</li>
+          <li>Choose the font size and weight used.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Text smaller than 18pt (or 14pt bold) must have a contrast ratio of at least 4.5:1.</li>
+          <li>Large text (18pt+ or 14pt bold+) must have at least 3:1 contrast.</li>
+          <li>Interactive components (like buttons, links, icons) must also meet these thresholds.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 2.1 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>2.2</b>: Important information is conveyed using more than just colour.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is important information conveyed using more than just colour?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Scan the page for use of colour to convey meaning (e.g. red = error, green = success, coloured charts, selected states).</li>
+          <li>Check whether the same meaning is conveyed in another way (e.g. icon, text label, pattern, underline).</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>No information is conveyed by colour alone.</li>
+          <li>Alternative indicators are present (e.g. “Error” text, symbols, or visible label changes).</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 2.2 to clipboard</button></div>
+    </details>
+
+
+    <h3>3. People with reduced vision</h3>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>3.1</b>: All content remains available and usable when zoomed or magnified.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Does all content remain available and usable when zoomed or magnified?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>In Chrome or Firefox, press <kbd>Ctrl</kbd> + <kbd>+</kbd> (Windows) or <kbd>Cmd</kbd> + <kbd>+</kbd> (Mac) to increase zoom up to 400%.</li>
+          <li>Scroll through the page.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>All content is still visible, readable, and functional.</li>
+          <li>No horizontal scrolling is needed except for large images, maps, or data tables.</li>
+          <li>Nothing is cut off, overlapped, or missing.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 3.1 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>3.2</b>: The page works across screen sizes and orientations.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Does the page work across screen sizes and orientations?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Resize the browser window to smaller widths (e.g. simulate a mobile view).</li>
+          <li>If on mobile, rotate between portrait and landscape.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Layout adjusts to fit all screen sizes and orientations.</li>
+          <li>No overlapping, disappearing, or cut-off content.</li>
+          <li>Key functions and navigation remain usable.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 3.2 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>3.3</b>: The page is usable in dark mode or high contrast settings.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is the page usable in dark mode or high contrast settings?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>On your device, enable dark mode (system or browser setting).</li>
+          <li>On Windows, toggle high contrast mode (e.g. <kbd>ALT</kbd> + <kbd>LEFT SHIFT</kbd> + <kbd>PRINT SCREEN</kbd>).</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Text and UI remain legible and usable.</li>
+          <li>No low-contrast text or invisible elements.</li>
+          <li>Focus indicators and highlights are still visible.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 3.3 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>3.4</b>: Important elements remain visible without horizontal scrolling or clipping when zoomed.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Do important elements remain visible without horizontal scrolling or clipping when zoomed?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use browser zoom at 100% and 400%.</li>
+          <li>Check for horizontal scrolling or clipped text on standard and small screens.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>No essential content or controls are hidden, clipped, or force horizontal scrolling.</li>
+          <li>Page reflows properly and key actions (like “Submit”) are always reachable.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 3.4 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>3.5</b>: Headings are used to create a clear and logical page outline.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are headings used to create a clear and logical page outline?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Open browser DevTools (Right click → Inspect → use Elements tab).</li>
+          <li>Look for <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, etc. or use a browser extension like HeadingsMap.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Headings are used in logical order (e.g. H1 &gt; H2 &gt; H3).</li>
+          <li>They represent the page structure, not just visual formatting.</li>
+          <li>Skipping levels (e.g. H2 to H4) is avoided.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 3.5 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>3.6</b>: Repetitive content (e.g. navigation, repeated banners) can be skipped easily.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Can users skip over repetitive content (e.g. navigation, repeated banners)?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use the keyboard (<kbd>TAB</kbd> key) from the top of the page.</li>
+          <li>Check if a “Skip to main content” link appears.</li>
+          <li>Optionally, inspect the code for ARIA landmarks (like <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>).</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>A visible skip link is available and works.</li>
+          <li>Or ARIA landmarks allow screen reader users to jump to key areas.</li>
+          <li>Navigation doesn’t trap keyboard focus.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 3.6 to clipboard</button></div>
+    </details>
+
+
+    <h3>4. People with reduced movement</h3>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.1</b>: All actions can be completed using keyboard only.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Can all actions be completed using keyboard only?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Put your mouse aside.</li>
+          <li>Use <kbd>TAB</kbd>, <kbd>SHIFT</kbd> +  <kbd>TAB</kbd>, <kbd>ENTER</kbd>, <kbd>SPACE</kbd>, and <kbd>ARROW</kbd> keys to navigate and activate all interactive elements.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>All interactive features (menus, buttons, modals, forms, etc.) are fully usable with only the keyboard.</li>
+          <li>Nothing requires a mouse or hover to activate.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.1 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.2</b>: The focus order is logical and consistent with user expectations.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is the focus order logical and consistent with user expectations?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Press Tab repeatedly to move through the interface.</li>
+          <li>Observe the order in which elements receive focus.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Focus moves in a logical order (typically top to bottom, left to right).</li>
+          <li>The sequence matches visual layout and expected workflow (e.g. input fields, action buttons).</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.2 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.3</b>: When focus needs to move, it is managed in a purposeful and helpful way.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>When focus needs to move, is it managed in a purposeful and helpful way?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Perform common actions like opening modals, submitting forms, or triggering alerts.</li>
+          <li>Watch where focus moves.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>After actions, focus moves to a logical new location, such as:
+            <ul>
+              <li>The first focusable element in a modal
+              <li>A success message
+              <li>A confirmation button    
+            </ul>
+          <li>Focus is not lost or sent back to the top of the page unexpectedly.
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.3 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.4</b>: The visible focus indicator is always clearly shown.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is the visible focus indicator always clearly shown?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use Tab to move through all focusable items.</li>
+          <li>Visually confirm the focus outline or style on each item.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>A clearly visible outline or style appears on all focused elements.</li>
+          <li>The indicator is not hidden or removed by CSS (e.g. outline: none).</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.4 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.5</b>: No elements trap keyboard focus or block navigation.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are there any elements that trap keyboard focus or block navigation?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use only the keyboard to navigate interactive components (e.g. modals, dropdowns).</li>
+          <li>Try Tab and Shift + Tab to exit and re-enter.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Focus can enter and leave interactive areas as expected.</li>
+          <li>Modals trap focus only while open, and allow escape with Esc or closing action.</li>
+          <li>No elements “trap” you in an infinite loop or block forward/backward movement.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.5 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.6</b>: Users can pause, stop, or adjust any moving or timed content.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Can users pause, stop, or adjust any moving or timed content?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Look for carousels, auto-scrolling elements, or time-limited popups.</li>
+          <li>Check for visible controls to pause, stop, or adjust.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Controls are available and work as expected.</li>
+          <li>Nothing moves or disappears too quickly without a way to adjust or pause it.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.6 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.7</b>: All interactive elements are operable by speaking their visible label.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are all interactive elements operable by speaking their visible label?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Observe the visible text of buttons, links, and controls.</li>
+          <li>Compare this to the accessible name (use browser dev tools or screen reader).</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>The visible label matches what a speech recognition tool would use (e.g. “Click ‘Submit’” works if the button says Submit).</li>
+          <li>No hidden names that differ from the visible text.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.7 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>4.8</b>: Links and buttons have clear, unique labels to avoid ambiguity.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Do links and buttons have clear, unique labels to avoid ambiguity?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Identify all interactive links and buttons.</li>
+          <li>Check that each has a clear, descriptive label.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>No repeated or vague labels like “Click here” or “Learn more”.</li>
+          <li>Each button or link explains its action (e.g. “Download PDF”, “View product details”).</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 4.8 to clipboard</button></div>
+    </details>
+
+
+    <h3>5. People with no vision</h3>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>5.1</b>: Interactive elements are properly labelled.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are interactive elements properly labelled?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use a screen reader (like NVDA or VoiceOver) to navigate to all buttons, links, form fields, and controls.</li>
+          <li>Listen to what’s announced.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>The role (e.g. “button”), name (e.g. “Submit”), and state (e.g. “checked”) are clear and match what’s shown visually.</li>
+          <li>Elements aren’t announced as “unlabelled button” or “clickable item.”</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 5.1 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>5.2</b>: Element states (e.g. expanded, selected) are clearly announced.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are element states (e.g. expanded, selected) announced clearly?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Navigate to expandable menus, tabs, checkboxes, or buttons using a screen reader.</li>
+          <li>Interact with them (e.g. expand/collapse, select/deselect).</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Changes in state (e.g. “expanded”, “selected”, “checked”, “disabled”) are immediately and clearly announced by the screen reader.</li>
+          <li>The user knows what has happened after interacting.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 5.2 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>5.3</b>: Headings and landmarks are used to structure the page.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are headings and landmarks used to structure the page?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Use a screen reader to open the Headings list and Landmarks list (e.g. NVDA: <kbd>INS</kbd> + <kbd>F7</kbd>).</li>
+          <li>Review what’s listed.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Headings are used logically (e.g. H1 for page title, H2s for major sections).</li>
+          <li>Landmarks (e.g. main, nav, footer, banner) are present and used appropriately.</li>
+          <li>Lists are not empty, missing, or cluttered with irrelevant content.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 5.3 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>5.4</b>: Important changes (e.g. errors, success messages) are announced by screen readers.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are important changes (e.g. errors, success messages) announced by screen readers?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Trigger a change (e.g. submit a form, encounter an error, update a field).</li>
+          <li>Listen with a screen reader for any announcements.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>The screen reader automatically announces new messages.</li>
+          <li>The user doesn’t need to manually find the message.</li>
+          <li>Use of ARIA live regions (e.g. <code>aria-live="polite"</code>) is properly implemented.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 5.4 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>5.5</b>: The language of the page and its content is correctly defined.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is the language of the page and its content correctly defined?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>View the page’s HTML in dev tools and check the <code>&lt;html lang="..."&gt;</code>> attribute.
+          <li>For multilingual content, check that language changes are marked (e.g. <code>&lt;span lang="fr"&gt;Bonjour&lt;/span&gt;).</code>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>The default page language is correctly set using the lang attribute.</li>
+          <li>Any changes in language (e.g. foreign phrases) are correctly identified.</li>
+          <li>Screen readers pronounce content using the correct voice or accent.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 5.5 to clipboard</button></div>
+    </details>
+
+
+    <h3>6. People with limited or no hearing</h3>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>6.1</b>: Accurate captions are provided for audio and video.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Are accurate captions provided for audio and video?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Play a video and turn captions on.</li>
+          <li>Watch the video and compare captions to what’s spoken.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Captions include all spoken content and identify who is speaking.</li>
+          <li>Non-speech sounds (e.g. [music], [laughter], [door slams]) are also included.</li>
+          <li>No major timing delays or transcription errors.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 6.1 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>6.2</b>: A transcript is available for all spoken content.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is a transcript available for all spoken content?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Check if a downloadable or linked transcript is provided near the video or audio.</li>
+          <li>Open and review the content.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>The transcript includes all spoken dialogue, speaker labels, and important non-verbal sounds.</li>
+          <li>It’s available in plain text or accessible PDF/HTML format.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 6.2 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>6.3</b>: Audio description is available for key visual information in videos.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Is audio description available for key visual information in videos?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Watch the video without looking at the screen, or listen using a screen reader.</li>
+          <li>Ask: Can I understand everything important without visuals?</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Visual-only content (like text on screen, gestures, visual cues) is described in an alternate version or audio track.</li>
+          <li>If no visual info is essential, a note can state “no audio description needed.”</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 6.3 to clipboard</button></div>
+    </details>
+
+    <details class="acceptance-criteria" name="acceptance-criteria">
+      <summary><b>6.4</b>: Users can pause, stop, or adjust audio and video playback.</summary>
+      <div class="details-content">
+        <h4>Test question:</h4> 
+        <p>Can users pause, stop, or adjust audio/video playback?</p>
+        <h4>Simple steps to test:</h4>
+        <ol>
+          <li>Play any embedded media on the page.</li>
+          <li>Try to pause, stop, or adjust volume/playback speed.</li>
+        </ol>
+        <h4>What determines pass:</h4>
+        <ul>
+          <li>Media has clear, accessible controls for pause/stop.</li>
+          <li>Volume can be adjusted separately from the system.</li>
+          <li>For auto-playing content, controls are visible and easy to use.</li>
+        </ul>
+      </div>
+      <div class="copy"><button class="button-smaller">Copy 6.4 to clipboard</button></div>
+    </details>
+
+  </div>
+</main>
+
+<script>
+  (function () {
+    'use strict';
+    var btn = document.getElementById('openAll');
+    if (!btn) return;
+
+    if (!btn.hasAttribute('type')) btn.setAttribute('type', 'button');
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var list = document.querySelectorAll('details.acceptance-criteria');
+      var isOpening = btn.textContent.trim().toLowerCase().startsWith('open');
+
+      if (isOpening) {
+        list.forEach(function (d) {
+          d.removeAttribute('name');
+          d.setAttribute('open', '');
+        });
+        btn.textContent = 'Close all acceptance criteria';
+      } else {
+        list.forEach(function (d) {
+          d.removeAttribute('open');
+        });
+        btn.textContent = 'Open all acceptance criteria';
+      }
+    });
+  })();
+</script>
+<script>
+(function () {
+  'use strict';
+
+  // Delegated click for any "Copy to clipboard" button inside .copy
+  document.addEventListener('click', function (evt) {
+    var btn = evt.target.closest('.copy .button-small, .copy button');
+    if (!btn) return;
+
+    var details = btn.closest('details');
+    if (!details) return;
+
+    // Clone the details so we can strip UI-only parts before extracting text
+    var clone = details.cloneNode(true);
+    // Remove all copy buttons/containers from the clone
+    clone.querySelectorAll('.copy').forEach(function (n) { n.remove(); });
+
+    // Prefer innerText so it reflects human-readable text (not markup)
+    var textToCopy = (clone.innerText || '').trim();
+    if (!textToCopy) {
+      // Fallback: try summary + visible content
+      var summaryEl = details.querySelector('summary');
+      var contentEl = details.querySelector('.details-content') || details;
+      var summaryText = summaryEl ? summaryEl.innerText.trim() : '';
+      var contentText = contentEl ? contentEl.innerText.trim() : '';
+      textToCopy = (summaryText + '\\n\\n' + contentText).trim();
+    }
+
+    if (!textToCopy) return;
+
+    var originalLabel = btn.dataset.originalLabel || btn.textContent;
+    btn.dataset.originalLabel = originalLabel;
+
+    function showCopied(label) {
+      btn.textContent = label || 'Copied!';
+      // revert after a short delay
+      setTimeout(function () {
+        btn.textContent = btn.dataset.originalLabel || originalLabel;
+      }, 1600);
+    }
+
+    function copyWithExecCommand(text) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, ta.value.length);
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch (e) {}
+      document.body.removeChild(ta);
+      return ok;
+    }
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(textToCopy).then(function () {
+        showCopied('Copied!');
+      }).catch(function () {
+        if (copyWithExecCommand(textToCopy)) {
+          showCopied('Copied!');
+        } else {
+          showCopied('Copy failed');
+        }
+      });
+    } else {
+      if (copyWithExecCommand(textToCopy)) {
+        showCopied('Copied!');
+      } else {
+        showCopied('Copy failed');
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
